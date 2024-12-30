@@ -11,5 +11,17 @@ typedef struct s_stack
 }	t_stack;
 
 void	push_swap(int argc, char **argv);
+int	ft_atoi(const char *str);
+void    ft_sa(t_stack   a);
+void    ft_sb(t_stack   b);
+void    ft_ss(t_stack   a, t_stack  b);
+void    ft_pa(t_stack   a, t_stack b);
+void    ft_pb(t_stack   a, t_stack b);
+void    ft_ra(t_stack  a);
+void    ft_rb(t_stack  b);
+void    ft_rr(t_stack  a, t_stack  b);
+void    ft_rra(t_stack  a);
+void    ft_rrb(t_stack  b);
+void ft_rrr(t_stack  a, t_stack  b);
 
 #endif
