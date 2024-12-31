@@ -11,7 +11,7 @@ void    push_swap(int   argc, char **argv)
     if (argc < 2)
         return ;
     a.size = argc - 1;
-    printf("a.size: %i\n", a.size);
+    //printf("a.size: %i\n", a.size);
     a.stack = (int *)malloc(sizeof(int) * a.size);
     if (!a.stack)
         return ;
@@ -23,28 +23,16 @@ void    push_swap(int   argc, char **argv)
     isError = 0;
     while (i < a.size)
     {
-        if (!(a.stack[i] = ft_atoi(argv[i + 1]))) {
+        if (!(a.stack[i] = ft_atoi(argv[i + 1]))) //zero has problem and big ints has not been provised
+        {
             write(1, "Error\n", 6);
             isError = 1;
             return ;
         }
         i++;
     }
-    b.stack[0] = 1;
-    b.stack[1] = 2;
-    b.stack[2] = 3;
-    b.size = 3;
-    if (!isError)
-        ft_rrr(a, b);
-    i = 0;
-    while (i < a.size)
-    {
-        printf("a[%i]:%d, b[%i]:%d\n", i+1, a.stack[i], i+1, b.stack[i]);
-        i++;
-    }
 
-
-    
+    do_sorting(a, b);
 }
 
 int     main(int argc, char **argv)

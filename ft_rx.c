@@ -1,4 +1,5 @@
 #include "push_swap.h"
+#include <stdio.h>
 
 void ft_ra(t_stack  a)
 {
@@ -7,14 +8,15 @@ void ft_ra(t_stack  a)
     int i;
     int temp;
 
-    i = a.size - 1;
+    i = 0;
     temp = a.stack[i];
-    while (i > 0)
+    while (i < a.size)
     {
-        a.stack[i] = a.stack[i - 1];
-        i--;
+        a.stack[i] = a.stack[i + 1];
+        i++;
     }
-    a.stack[0] = temp;
+    a.stack[a.size - 1] = temp;
+    printf("ra\n");
 }
 
 void ft_rb(t_stack  b)
@@ -24,18 +26,20 @@ void ft_rb(t_stack  b)
     int i;
     int temp;
 
-    i = b.size - 1;
+    i = 0;
     temp = b.stack[i];
-    while (i > 0)
+    while (i < b.size)
     {
-        b.stack[i] = b.stack[i - 1];
-        i--;
+        b.stack[i] = b.stack[i + 1];
+        i++;
     }
-    b.stack[0] = temp;
+    b.stack[b.size - 1] = temp;
+    printf("rb\n");
 }
 
 void ft_rr(t_stack  a, t_stack  b) //should the else of a t_stack be zero, nothing or !unintended!???
 {
-    ft_ra(a);
-    ft_rb(b);
+    ft_rra(a);
+    ft_rrb(b);
+    printf("rr\n");
 }
