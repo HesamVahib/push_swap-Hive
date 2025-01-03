@@ -30,3 +30,9 @@ rrb (reverse rotate b): Shift down all elements of stack b by 1.
     The last element becomes the first one.
     
 rrr : rra and rrb at the same time.
+
+5
+3 5
+5 3
+2 5 3
+5 3 2

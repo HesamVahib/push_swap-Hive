@@ -5,13 +5,12 @@ void    push_swap(int   argc, char **argv)
 {
     t_stack a;
     t_stack b;
-    int i;
+    int i, z;
     int isError;
 
     if (argc < 2)
         return ;
     a.size = argc - 1;
-    //printf("a.size: %i\n", a.size);
     a.stack = (int *)malloc(sizeof(int) * a.size);
     if (!a.stack)
         return ;
@@ -31,8 +30,16 @@ void    push_swap(int   argc, char **argv)
         }
         i++;
     }
-
     do_sorting(a, b);
+    z = 0;
+    while (a.stack[z] || b.stack[z])
+    {
+        printf("a[%i]:%d, b[%i]:%d\n", z+1, a.stack[z], z+1, b.stack[z]);
+        z++;
+    }
+    //printf("i:%d, j:%d\n", i);
+
+    //do_sorting(a, b);
 }
 
 int     main(int argc, char **argv)

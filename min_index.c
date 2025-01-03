@@ -21,3 +21,24 @@ int min_index(t_stack x)
     }
     return  index;
 }
+
+int max_index(t_stack x)
+{
+    int i;
+    int index;
+    int max;
+
+    i = 1;
+    index = 0;
+    max = x.stack[0];
+    while (i < x.size)
+    {
+        if (max <= x.stack[i])
+        {
+            max = x.stack[i];
+            index = i;
+        }
+        i++;
+    }
+    return  index;
+}
