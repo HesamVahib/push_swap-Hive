@@ -27,7 +27,7 @@ static void set_target_b(t_stack_elem *stack_a, t_stack_elem *stack_b)
     }
 }
 
-static void init_b_to_a(t_stack_elem *stack_a, t_stack_elem *stack_b)
+void init_b_to_a(t_stack_elem *stack_a, t_stack_elem *stack_b)
 {
     current_index_median(stack_a);
     current_index_median(stack_b);

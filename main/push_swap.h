@@ -6,6 +6,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+
+# include <stdio.h>
+
+
 typedef struct s_stack_elem
 {
     int                value;
@@ -22,15 +26,10 @@ void	ft_putendl_fd(char *s, int fd);
 
 
 void    current_index_median(t_stack_elem *stack);
-// static void set_target_a(t_stack_elem *stack_a, t_stack_elem *stack_b);
-// static void cost_to_push_a(t_stack_elem *stack_a, t_stack_elem *stack_b);
 void    find_cheapest(t_stack_elem  *stack);
 void    init_elems_a(t_stack_elem *stack_a, t_stack_elem *stack_b);
-// static void set_target_b(t_stack_elem *stack_a, t_stack_elem *stack_b);
-// static void move_a_to_b(t_stack_elem **stack_a, t_stack_elem **stack_b);
-// static void move_b_to_a(t_stack_elem **stack_a, t_stack_elem **stack_b);
+void move_a_to_b(t_stack_elem **stack_a, t_stack_elem **stack_b);
 void    sort_stacks(t_stack_elem **stack_a, t_stack_elem **stack_b);
-// static void min_on_top(t_stack_elem **stack_a);
 t_stack_elem    *find_biggest_one(t_stack_elem *stack);
 void    sort_three(t_stack_elem **stack);
 char **ft_split(char const *s, char c);
@@ -66,10 +65,9 @@ int is_duplicated(t_stack_elem *stack_a, int num);
 
 t_stack_elem    *fetch_cheapest(t_stack_elem *stack);
 
-static void init_b_to_a(t_stack_elem *stack_a, t_stack_elem *stack_b);
-
+void init_b_to_a(t_stack_elem *stack_a, t_stack_elem *stack_b);
+void move_b_to_a(t_stack_elem **stack_a, t_stack_elem **stack_b);
 //sorting
-// static  void  rotate_both(t_stack_elem **stack_a, t_stack_elem **stack_b, t_stack_elem *cheapest_to_push);
-// static void move_b_to_a(t_stack_elem **stack_a, t_stack_elem **stack_b);
-
+void  rotate_both(t_stack_elem **stack_a, t_stack_elem **stack_b, t_stack_elem *cheapest_to_push);
+void rev_rotate_both(t_stack_elem **stack_a, t_stack_elem **stack_b, t_stack_elem *cheapest_to_push);
 #endif

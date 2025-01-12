@@ -66,10 +66,9 @@ int is_duplicated(t_stack_elem *stack_a, int num);
 
 t_stack_elem    *fetch_cheapest(t_stack_elem *stack);
 
-static void init_b_to_a(t_stack_elem *stack_a, t_stack_elem *stack_b);
-
 //sorting
-// static  void  rotate_both(t_stack_elem **stack_a, t_stack_elem **stack_b, t_stack_elem *cheapest_to_push);
-// static void move_b_to_a(t_stack_elem **stack_a, t_stack_elem **stack_b);
+static  void  rotate_both(t_stack_elem **stack_a, t_stack_elem **stack_b, t_stack_elem *cheapest_to_push);
+static void move_b_to_a(t_stack_elem **stack_a, t_stack_elem **stack_b);
+static void init_b_to_a(t_stack_elem *stack_a, t_stack_elem *stack_b);
 
 #endif

@@ -31,6 +31,6 @@ void    sort_stacks(t_stack_elem **stack_a, t_stack_elem **stack_b)
         init_b_to_a(*stack_a, *stack_b); // in init_b_to_a
         move_b_to_a(stack_a, stack_b);
     }
-    current_index(*stack_a);
+    current_index_median(*stack_a);
     min_push_to_top(stack_a);
 }

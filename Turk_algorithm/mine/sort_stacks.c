@@ -28,7 +28,7 @@ void    sort_stacks(t_stack_elem **stack_a, t_stack_elem **stack_b)
     sort_three(stack_a);
     while (*stack_b)
     {
-        init_b_to_a(*stack_a, *stack_b); // in init_b_to_a
+        init_b_to_a(*stack_a, *stack_b); // in init_a
         move_b_to_a(stack_a, stack_b);
     }
     current_index(*stack_a);

@@ -34,9 +34,11 @@ void init_stack_a(t_stack_elem **stack_a, char **argv)
     i = 0;
     while (argv[i])
     {
-        num = ft_atoi(argv[i]); // atoi
-        if (!num || ((num > INT_MAX || num < INT_MIN)) || is_duplicated(*stack_a, num)) // in errors
-            return(error_out(stack_a));
+		num = ft_atoi(argv[i]);
+		if (num > INT_MAX || num < INT_MIN) //Check for overflow
+			return(error_out(stack_a));
+		if (is_duplicated(*stack_a, (int)num))
+			return(error_out(stack_a));
         create_node(stack_a, (int)num);
         i++;
     }

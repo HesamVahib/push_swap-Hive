@@ -22,7 +22,7 @@ void	rrr(t_stack_elem **stack_a, t_stack_elem **stack_b)
 {
 	if (!*stack_a || !((*stack_a)->next) || !*stack_b || !((*stack_b)->next))
 		return ;
-	rra(stack_a);
-	rrb(stack_b);
+	rra(stack_a, 0);
+	rrb(stack_b, 0);
 	ft_putendl_fd("rrr", 1);
 }
