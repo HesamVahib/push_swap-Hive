@@ -23,7 +23,6 @@ int is_sorted_asc(t_stack   x)
 
 int is_sorted_desc(t_stack   x)
 {
-    //printf("I am here in sorted Desc\n");
     int maximum;
     int i;
 
@@ -39,6 +38,5 @@ int is_sorted_desc(t_stack   x)
         else
             return (0);
     }
-    //printf("I am here in sorted Desc at the end and maximum is: %d\n", maximum);
     return (1);
 }

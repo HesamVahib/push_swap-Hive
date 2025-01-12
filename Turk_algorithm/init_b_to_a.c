@@ -1,3 +1,4 @@
+#include "push_swap.h"
 
 static void set_target_b(t_stack_elem *stack_a, t_stack_elem *stack_b)
 {
@@ -11,7 +12,7 @@ static void set_target_b(t_stack_elem *stack_a, t_stack_elem *stack_b)
         current_a = stack_a;
         while (current_a)
         {
-            if (current_a->value > b->value && current_a->value < best_match_index)
+            if (current_a->value > stack_b->value && current_a->value < best_match_index)
             {
                 best_match_index = current_a->value;
                 target_elem = current_a;
@@ -26,7 +27,7 @@ static void set_target_b(t_stack_elem *stack_a, t_stack_elem *stack_b)
     }
 }
 
-static void init_b_to_a(t_stack_elem **stack_a, t_stack_elem **stack_b)
+static void init_b_to_a(t_stack_elem *stack_a, t_stack_elem *stack_b)
 {
     current_index(stack_a);
     current_index(stack_b);

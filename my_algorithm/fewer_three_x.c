@@ -3,7 +3,6 @@
 
 void    fewer_three_a(t_stack a)
 {
-    //printf("I am here at fewer A\n");
     int minimum_index;
 
     if (a.size == 1 || a.size > 3)
@@ -28,22 +27,19 @@ void    fewer_three_a(t_stack a)
 
 void    fewer_three_b(t_stack b)
 {
-    //printf("I am here at fewer B and b.size: %d\n", b.size);
     int maximum_index;
 
     if (b.size == 1 || b.size > 3)
         return ;
-    //printf("I am here after here and is sorted desc: %d\n", is_sorted_desc(b));
     if (!(is_sorted_desc(b)))
     {
-        //printf("I am here at fewer B, inside\n");
         if (b.size == 2)
             return (ft_sb(b));
         maximum_index = max_index(b);
         if (maximum_index == 2)
-            return (ft_sb(b), ft_rb(b));
+            return (ft_sb(b), ft_rrb(b));
         else if (maximum_index == 1 && b.stack[0] <= b.stack[2])
-            ft_rb(b);
+            ft_rrb(b);
         else if (maximum_index == 1 && (b.stack[0] > b.stack[2]))
             ft_sb(b);
         else if (maximum_index == 0 && !(b.stack[1] < b.stack[2]))

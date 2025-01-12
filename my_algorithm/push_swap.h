@@ -10,7 +10,6 @@ typedef struct s_stack
     int	size;
 }	t_stack;
 
-void	push_swap(int argc, char **argv);
 int	ft_atoi(const char *str);
 void    ft_sa(t_stack   a);
 void    ft_sb(t_stack   b);

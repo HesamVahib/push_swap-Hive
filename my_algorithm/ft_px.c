@@ -21,7 +21,7 @@ void    ft_pa(t_stack   *a, t_stack *b)
         i++;
     }
     b->stack[i] = 0;
-    a->size += 1; //Increasing size of a
+    a->size += 1;
     b->size -= 1;
     printf("pa\n");
 }

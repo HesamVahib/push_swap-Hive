@@ -1,3 +1,5 @@
+#include "push_swap.h"
+
 static int count_words(char *s, char c)
 {
     int count;
@@ -20,25 +22,25 @@ static int count_words(char *s, char c)
     return (count);
 }
 
-stattic char *next_word(char *s, char c)
+static char *next_word(char *s, char c)
 {
     static int i = 0;
     char *nxt_word;
     size_t len;
-    int i;
+    int j;
 
     len = 0;
-    i = 0;
-    while (s[cursor] == c)
-        ++cursor;
-    while (s[cursor + len] && s[cursor + len] != c)
+    j = 0;
+    while (s[i] == c)
+        ++i;
+    while (s[i + len] && s[i + len] != c)
         ++len;
     nxt_word = (char *)malloc(sizeof(char) * (len + 1));
     if (!nxt_word)
         return (NULL);
-    while ((s[cursor] && s[cursor] != c))
-        nxt_word[i++] = s[cursor++];
-    nxt_word[i] = '\0';
+    while ((s[i] && s[i] != c))
+        nxt_word[j++] = s[i++];
+    nxt_word[j] = '\0';
     return (nxt_word);
 }
 
