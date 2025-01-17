@@ -8,13 +8,13 @@ SRC_PART = 	main.c \
             both_rules.c \
 			errors.c \
             ft_atoi.c \
-            init_a.c \
-            init_b_to_a.c \
+            init_a_pushing.c \
+            init_b_returning.c \
 			libft.c \
             move_a_to_b.c \
 			sort_stacks.c \
 			sort_three.c \
-			sorting.c \
+			rotating.c \
 			split.c \
 			stack_init.c \
 			stack_utils.c
