@@ -6,7 +6,7 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 23:00:00 by hvahib            #+#    #+#             */
-/*   Updated: 2025/01/17 23:04:26 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/02/18 18:19:20 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# include <stdio.h>
 
 typedef struct s_stack_elem
 {
@@ -39,11 +41,12 @@ void			sort_stacks(t_stack_elem **stack_a, t_stack_elem **stack_b);
 t_stack_elem	*find_biggest_one(t_stack_elem *stack);
 void			sort_three(t_stack_elem **stack);
 char			**ft_split(char const *s, char c);
-int				ft_atoi(const char *str);
 void			init_stack_a(t_stack_elem **stack_a, char **argv);
 int				is_sorted(t_stack_elem *stack);
 int				stack_size(t_stack_elem *stack);
-void			free_stack(t_stack_elem **stack);
+void			clear_stack(t_stack_elem **stack);
+int				check_syntax(char *str_n);
+long			ft_atol(const char *s);
 
 void			sa(t_stack_elem **list_a);
 void			pa(t_stack_elem **list_a, t_stack_elem **list_b);
@@ -67,7 +70,7 @@ t_stack_elem	*ft_lstlast(t_stack_elem *lst);
 int				ft_lstsize(t_stack_elem *lst);
 
 void			error_out(t_stack_elem **stack_a);
-int				is_duplicated(t_stack_elem *stack_a, int num);
+int				has_duplicate(t_stack_elem *stack_a, int num);
 t_stack_elem	*fetch_cheapest(t_stack_elem *stack);
 
 void			init_b_to_a(t_stack_elem *stack_a, t_stack_elem *stack_b);
@@ -77,5 +80,7 @@ void			rotate_both(t_stack_elem **stack_a, t_stack_elem **stack_b,
 					t_stack_elem *cheapest_to_push);
 void			rev_rotate_both(t_stack_elem **stack_a, t_stack_elem **stack_b,
 					t_stack_elem *cheapest_to_push);
+
+char			**split(char *s, char c);
 
 #endif

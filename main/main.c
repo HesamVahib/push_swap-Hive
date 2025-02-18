@@ -6,7 +6,7 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 22:58:01 by hvahib            #+#    #+#             */
-/*   Updated: 2025/01/17 22:59:24 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/02/18 21:46:48 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@ int	main(int argc, char **argv)
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
 	else if (argc == 2)
-		argv = ft_split(argv[1], ' ');
-	if (!argv)
-		return (1);
-	init_stack_a(&stack_a, argv);
+		argv = split(argv[1], ' ');
+	init_stack_a(&stack_a, argv + 1);
 	if (!is_sorted(stack_a))
 	{
 		if (stack_size(stack_a) == 2)
@@ -35,6 +33,6 @@ int	main(int argc, char **argv)
 		else
 			sort_stacks(&stack_a, &stack_b);
 	}
-	free_stack(&stack_a);
+	clear_stack(&stack_a);
 	return (0);
 }

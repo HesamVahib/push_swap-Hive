@@ -6,7 +6,7 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 22:40:05 by hvahib            #+#    #+#             */
-/*   Updated: 2025/01/17 22:40:47 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/02/18 21:22:27 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sa(t_stack_elem **stack_a)
 {
 	t_stack_elem	*temp;
-
+	
 	if (!*stack_a || !((*stack_a)->next))
 		return ;
 	temp = *stack_a;

@@ -6,7 +6,7 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 22:53:44 by hvahib            #+#    #+#             */
-/*   Updated: 2025/01/17 22:55:26 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/02/18 21:27:29 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	current_index_median(t_stack_elem *stack)
 	while (stack)
 	{
 		stack->index = i;
-		if (i <= median)
+		if (i <= median + 1)
 			stack->above_median = true;
 		else
 			stack->above_median = false;

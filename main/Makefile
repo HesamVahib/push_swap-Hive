@@ -7,17 +7,17 @@ SRC_PART = 	main.c \
             b_rules.c \
             both_rules.c \
 			errors.c \
-            ft_atoi.c \
             init_a_pushing.c \
             init_b_returning.c \
 			libft.c \
-            move_a_to_b.c \
+            from_a_to_b.c \
 			sort_stacks.c \
 			sort_three.c \
 			rotating.c \
-			split.c \
-			stack_init.c \
-			stack_utils.c
+			stack_initiation.c \
+			stack_utils.c \
+			ft_atol.c \
+			split.c
 
 
 OBJ_PART = $(SRC_PART:.c=.o)
