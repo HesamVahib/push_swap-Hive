@@ -6,13 +6,13 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 22:40:05 by hvahib            #+#    #+#             */
-/*   Updated: 2025/02/18 21:22:27 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/02/19 16:50:59 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stack_elem **stack_a)
+void	sa(t_stack_elem **stack_a, int	i)
 {
 	t_stack_elem	*temp;
 	
@@ -25,7 +25,8 @@ void	sa(t_stack_elem **stack_a)
 	temp->prev = *stack_a;
 	if (temp->next)
 		temp->next->prev = temp;
-	ft_putendl_fd("sa", 1);
+	if (i == 1)
+		ft_putendl_fd("sa", 1);
 }
 
 void	pa(t_stack_elem **stack_a, t_stack_elem **stack_b)
@@ -45,7 +46,7 @@ void	pa(t_stack_elem **stack_a, t_stack_elem **stack_b)
 	ft_putendl_fd("pa", 1);
 }
 
-void	ra(t_stack_elem **stack_a)
+void	ra(t_stack_elem **stack_a, int	i)
 {
 	t_stack_elem	*temp;
 	t_stack_elem	*last;
@@ -59,10 +60,11 @@ void	ra(t_stack_elem **stack_a)
 	last->next = temp;
 	temp->prev = last;
 	temp->next = NULL;
-	ft_putendl_fd("ra", 1);
+	if (i == 1)
+		ft_putendl_fd("ra", 1);
 }
 
-void	rra(t_stack_elem **stack_a)
+void	rra(t_stack_elem **stack_a, int i)
 {
 	t_stack_elem	*last;
 
@@ -75,5 +77,6 @@ void	rra(t_stack_elem **stack_a)
 	last->next = *stack_a;
 	(*stack_a)->prev = last;
 	*stack_a = last;
-	ft_putendl_fd("rra", 1);
+	if (i == 1)
+		ft_putendl_fd("rra", 1);
 }

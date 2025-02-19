@@ -6,7 +6,7 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 23:00:00 by hvahib            #+#    #+#             */
-/*   Updated: 2025/02/18 18:19:20 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/02/19 16:52:51 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void			move_a_to_b(t_stack_elem **stack_a, t_stack_elem **stack_b);
 void			sort_stacks(t_stack_elem **stack_a, t_stack_elem **stack_b);
 t_stack_elem	*find_biggest_one(t_stack_elem *stack);
 void			sort_three(t_stack_elem **stack);
-char			**ft_split(char const *s, char c);
 void			init_stack_a(t_stack_elem **stack_a, char **argv);
 int				is_sorted(t_stack_elem *stack);
 int				stack_size(t_stack_elem *stack);
@@ -48,15 +47,15 @@ void			clear_stack(t_stack_elem **stack);
 int				check_syntax(char *str_n);
 long			ft_atol(const char *s);
 
-void			sa(t_stack_elem **list_a);
+void			sa(t_stack_elem **list_a, int	i);
 void			pa(t_stack_elem **list_a, t_stack_elem **list_b);
-void			ra(t_stack_elem **list_a);
-void			rra(t_stack_elem **list_a);
+void			ra(t_stack_elem **list_a, int	i);
+void			rra(t_stack_elem **list_a, int	i);
 
-void			sb(t_stack_elem **list_b);
+void			sb(t_stack_elem **list_b, int	i);
 void			pb(t_stack_elem **list_b, t_stack_elem **list_a);
-void			rb(t_stack_elem **list_b);
-void			rrb(t_stack_elem **list_b);
+void			rb(t_stack_elem **list_b, int	i);
+void			rrb(t_stack_elem **list_b, int	i);
 
 void			ss(t_stack_elem **list_a, t_stack_elem **list_b);
 void			rr(t_stack_elem **list_a, t_stack_elem **list_b);
