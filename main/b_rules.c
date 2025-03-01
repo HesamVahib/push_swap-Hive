@@ -6,13 +6,13 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 22:40:55 by hvahib            #+#    #+#             */
-/*   Updated: 2025/02/19 16:52:16 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/02/22 16:26:09 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sb(t_stack_elem **stack_b, int	i)
+void	sb(t_stack_elem **stack_b, int i)
 {
 	t_stack_elem	*temp;
 
@@ -46,7 +46,7 @@ void	pb(t_stack_elem **stack_b, t_stack_elem **stack_a)
 	ft_putendl_fd("pb", 1);
 }
 
-void	rb(t_stack_elem **stack_b, int	i)
+void	rb(t_stack_elem **stack_b, int i)
 {
 	t_stack_elem	*temp;
 	t_stack_elem	*last;
@@ -64,7 +64,7 @@ void	rb(t_stack_elem **stack_b, int	i)
 		ft_putendl_fd("rb", 1);
 }
 
-void	rrb(t_stack_elem **stack_b, int	i)
+void	rrb(t_stack_elem **stack_b, int i)
 {
 	t_stack_elem	*last;
 

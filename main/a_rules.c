@@ -6,16 +6,16 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 22:40:05 by hvahib            #+#    #+#             */
-/*   Updated: 2025/02/19 16:50:59 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/02/22 16:25:36 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stack_elem **stack_a, int	i)
+void	sa(t_stack_elem **stack_a, int i)
 {
 	t_stack_elem	*temp;
-	
+
 	if (!*stack_a || !((*stack_a)->next))
 		return ;
 	temp = *stack_a;
@@ -46,7 +46,7 @@ void	pa(t_stack_elem **stack_a, t_stack_elem **stack_b)
 	ft_putendl_fd("pa", 1);
 }
 
-void	ra(t_stack_elem **stack_a, int	i)
+void	ra(t_stack_elem **stack_a, int i)
 {
 	t_stack_elem	*temp;
 	t_stack_elem	*last;

@@ -6,7 +6,7 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 23:00:00 by hvahib            #+#    #+#             */
-/*   Updated: 2025/02/19 16:52:51 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/03/01 18:36:34 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-# include <stdio.h>
 
 typedef struct s_stack_elem
 {
@@ -47,15 +45,15 @@ void			clear_stack(t_stack_elem **stack);
 int				check_syntax(char *str_n);
 long			ft_atol(const char *s);
 
-void			sa(t_stack_elem **list_a, int	i);
+void			sa(t_stack_elem **list_a, int i);
 void			pa(t_stack_elem **list_a, t_stack_elem **list_b);
-void			ra(t_stack_elem **list_a, int	i);
-void			rra(t_stack_elem **list_a, int	i);
+void			ra(t_stack_elem **list_a, int i);
+void			rra(t_stack_elem **list_a, int i);
 
-void			sb(t_stack_elem **list_b, int	i);
+void			sb(t_stack_elem **list_b, int i);
 void			pb(t_stack_elem **list_b, t_stack_elem **list_a);
-void			rb(t_stack_elem **list_b, int	i);
-void			rrb(t_stack_elem **list_b, int	i);
+void			rb(t_stack_elem **list_b, int i);
+void			rrb(t_stack_elem **list_b, int i);
 
 void			ss(t_stack_elem **list_a, t_stack_elem **list_b);
 void			rr(t_stack_elem **list_a, t_stack_elem **list_b);
@@ -81,5 +79,9 @@ void			rev_rotate_both(t_stack_elem **stack_a, t_stack_elem **stack_b,
 					t_stack_elem *cheapest_to_push);
 
 char			**split(char *s, char c);
+void			*ft_calloc(size_t num, size_t size);
+
+int				count_words(char *s, char c);
+void			free_array(char **arr, int size);
 
 #endif

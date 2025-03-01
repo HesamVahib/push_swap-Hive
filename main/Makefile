@@ -16,8 +16,9 @@ SRC_PART = 	main.c \
 			rotating.c \
 			stack_initiation.c \
 			stack_utils.c \
-			ft_atol.c \
-			split.c
+			atol.c \
+			splitting.c \
+			split_utils.c
 
 
 OBJ_PART = $(SRC_PART:.c=.o)
