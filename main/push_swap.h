@@ -6,7 +6,7 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 23:00:00 by hvahib            #+#    #+#             */
-/*   Updated: 2025/03/01 18:36:34 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/03/03 13:17:22 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void			move_a_to_b(t_stack_elem **stack_a, t_stack_elem **stack_b);
 void			sort_stacks(t_stack_elem **stack_a, t_stack_elem **stack_b);
 t_stack_elem	*find_biggest_one(t_stack_elem *stack);
 void			sort_three(t_stack_elem **stack);
-void			init_stack_a(t_stack_elem **stack_a, char **argv);
+int				init_stack_a(t_stack_elem **stack_a, char **argv);
 int				is_sorted(t_stack_elem *stack);
 int				stack_size(t_stack_elem *stack);
 void			clear_stack(t_stack_elem **stack);

@@ -6,7 +6,7 @@
 /*   By: hvahib <hvahib@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 23:10:27 by hvahib            #+#    #+#             */
-/*   Updated: 2025/03/01 18:36:20 by hvahib           ###   ########.fr       */
+/*   Updated: 2025/03/03 12:59:31 by hvahib           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	create_node(t_stack_elem **stack, int value)
 	}
 }
 
-void	init_stack_a(t_stack_elem **stack_a, char **argv)
+int	init_stack_a(t_stack_elem **stack_a, char **argv)
 {
 	long	num;
 	int		i;
@@ -47,16 +47,17 @@ void	init_stack_a(t_stack_elem **stack_a, char **argv)
 	while (argv[i])
 	{
 		if (check_syntax(argv[i]))
-			return (error_out(stack_a));
+			return (1);
 		num = ft_atol(argv[i]);
 		if (num > INT_MAX
 			|| num < INT_MIN)
-			return (error_out(stack_a));
+			return (1);
 		if (has_duplicate(*stack_a, (int)num))
-			return (error_out(stack_a));
+			return (1);
 		create_node(stack_a, (int)num);
 		i++;
 	}
+	return (0);
 }
 
 t_stack_elem	*fetch_cheapest(t_stack_elem *stack)
